@@ -43,6 +43,10 @@ app.post('/subscribe', (req, res) => {
         console.error('Error sending push:', err);
       });
   });
+
+  app.get('/',(req,res)=>{
+    res.status(200).json({message:"hello from node"})
+  });
   
   app.listen(port, () => {
     console.log(`Server running at http://localhost:${port}`);
